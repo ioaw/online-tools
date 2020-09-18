@@ -175,6 +175,12 @@ textarea {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
+.clippy {
+  margin-top: -3px;
+  position: relative;
+  top: 3px
+}
+
 ::-webkit-input-placeholder { 
   text-align: center;
   line-height: 200px;
@@ -300,4 +306,8 @@ fieldset[disabled] .btn-default.active {
 .btn-default .badge {
   color: #fff;
   background-color: #333;
+}
+
+.output button {
+  position: absolute;
 }

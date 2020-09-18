@@ -7,14 +7,17 @@
     <meta name="description" content="MD5 online hash file checksum function">
     <title>BaiduNetdisk Import-Link Generator Online
     </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178269513-1"></script>
     <script>
-      if (location.hostname != 'localhost') {
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-44208259-6', 'auto');
-        ga('send', 'pageview');
-      }
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-178269513-1');
     </script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/tootik/1.0.2/css/tootik.min.css">
     <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
   </head>
   <body>
@@ -44,6 +47,9 @@
         </div>
         <div class="output">
           <textarea id="output" placeholder="Output"></textarea>
+          <button id="copy" class="btn btn-default" data-clipboard-target="#output">
+            <img class="clippy" src="assets/images/clippy.svg" width="13px" alt="Copy to clipboard">
+          </button>
         </div>
       </div>
       <div id="sidebar">
@@ -137,6 +143,8 @@
       </div>
       <script src="https://cdn.jsdelivr.net/gh/emn178/js-md5/build/md5.min.js"></script>
       <script>method = md5;</script>
+      <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+      <script src="js/tooltips.js"></script>
     </div>
     <div id="footer">&copy; 2015-2017 Online Tools</div>
   </body>

@@ -139,6 +139,25 @@
       };
     }
 
+    /*!
+     * clipboard.js v2.0.6
+     * https://clipboardjs.com/
+     * 
+     * Licensed MIT © Zeno Rocha
+     */
+    var clipboard = new ClipboardJS('#copy');
+    var clipboardError;
+    clipboard.on('success', function(e) {
+      e.clearSelection();
+      clipboardError = false;
+      showTooltip(e.trigger, 'Copied!', clipboardError);
+    });
+
+    clipboard.on('error', function(e) {
+      clipboardError = true;
+      showTooltip(e.trigger, fallbackMessage(e.action), clipboardError);
+    });
+
     $('#execute').click(execute);
 
     var parts = location.pathname.split('/');
